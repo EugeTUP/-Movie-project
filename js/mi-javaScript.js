@@ -18,11 +18,18 @@ function inicializarBoton() {
 
 // ---------------------| BOTON REGISTRARSE |-------------------------------------------
 
+function cuadroGrande()
+{
+    var cuadro = document.grtById('cuadrado');
+    cuadro.style.transition = ('height 1s');
+    cuadro.style.height = '90%';
+}
+
 
 function manchaGrande() {
     var mancha = document.getElementById('man');
-    var signUp = document.getElementById('f-signUp');
 
+    
     mancha.style.transition = 'width 1s, height 1s';
     mancha.style.width = '100%';
     mancha.style.height = '100%';
@@ -121,23 +128,23 @@ function validar() {
 
 
     if (nom.value === ''){
-        swal("Here's the title!", "...and here's the text!");
+        swal("Campo requerido!", "...debe ingresar su nombre!");
         return false;
     }
     if (ape.value === ''){
-        alert('debe ingresar su apellido');
+        swal("Campo requerido!", "...debe ingresar su apellido!");
         return false;
     }
     if (mail.value === ''){
-        alert('debe ingresar su mail');
+        swal("Campo requerido!", "...debe ingresar su mail!");
         return false;
     }
     if (pass.value.length < 8){
-        alert('la contraseña debe tener al menos 8 caracteres');
+        swal("Campo requerido!", "...la contraseña debe tener mas de 8 caracteres!");
         return false;
     }
     if (conPass.value !== pass.value){
-        alert('las contraseñas no coinciden');
+        swal("Campo requerido!", "...las contraseñas no coinciden!");
         return false;
     }
 

@@ -11,7 +11,7 @@
 }
 
 #inicio {
-    background: url('../image/fondo-practica.jpg') center no-repeat;
+    /* background: url('../image/fondo-practica.jpg') center no-repeat; */
     border-bottom: ridge;
     background-size: cover;
     height: 670px;
@@ -194,3 +194,4 @@ span{
 {
     content:url('../image/wh-con-color.png')
 }
+
