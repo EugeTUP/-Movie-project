@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+   
     $("#btn-regis").click(function(){
         
         $("#f-login").hide(500);
@@ -13,6 +14,28 @@ $(document).ready(function(){
         $("#f-login").show(500);
         $("#titulo").text('Log In');   
     })
+
+    $("#btn-crear").click(function(){
+        if($("#f-signUp").valid()){
+            swal("Guardando");
+        }
+        else{
+            swal("Campos incompletos", "...hay campos sin completar");
+        }
+    })
+
+    $("#f-signUp").validate({
+        rules: {
+            txtNombre: {
+                required: true,
+                minlenght: 3
+            }
+        },
+        messages: {
+            txtNombre: "Por favor, ingresa tu nombre."
+        }
+    });
+
 });
 
 
@@ -22,9 +45,9 @@ $(document).ready(function(){
 
 
 
- document.addEventListener('DOMContentLoaded', inicializarBoton)
+//  document.addEventListener('DOMContentLoaded', inicializarBoton)
 
- function inicializarBoton() {
+//  function inicializarBoton() {
     // document.getElementById('btn-regis').addEventListener('click', function () {
     //     manchaGrande();
     //  });
@@ -33,10 +56,10 @@ $(document).ready(function(){
 //         manchaGrande2();
 //     })
 
-    document.getElementById('btn-crear').addEventListener('click', function () {
-        validar();
-    })  
-}
+//     document.getElementById('btn-crear').addEventListener('click', function () {
+//         validar();
+//     })  
+// }
 
 
 
@@ -136,35 +159,35 @@ $(document).ready(function(){
 // ------------| VALIDACIONES |-------------------------------------------------------
 
 
-function validar() {
-    var nom = document.getElementById('txtNombre');
-    var ape = document.getElementById('txtApellido');
-    var mail = document.getElementById('txtmail');
-    var pass = document.getElementById('txtpas');
-    var conPass = document.getElementById('txtConfirmPass');
+// function validar() {
+//     var nom = document.getElementById('txtNombre');
+//     var ape = document.getElementById('txtApellido');
+//     var mail = document.getElementById('txtmail');
+//     var pass = document.getElementById('txtpas');
+//     var conPass = document.getElementById('txtConfirmPass');
 
 
-    if (nom.value === ''){
-        swal("Campo requerido!", "...debe ingresar su nombre!");
-        return false;
-    }
-    if (ape.value === ''){
-        swal("Campo requerido!", "...debe ingresar su apellido!");
-        return false;
-    }
-    if (mail.value === ''){
-        swal("Campo requerido!", "...debe ingresar su mail!");
-        return false;
-    }
-    if (pass.value.length < 8){
-        swal("Campo requerido!", "...la contraseña debe tener mas de 8 caracteres!");
-        return false;
-    }
-    if (conPass.value !== pass.value){
-        swal("Campo requerido!", "...las contraseñas no coinciden!");
-        return false;
-    }
+//     if (nom.value === ''){
+//         swal("Campo requerido!", "...debe ingresar su nombre!");
+//         return false;
+//     }
+//     if (ape.value === ''){
+//         swal("Campo requerido!", "...debe ingresar su apellido!");
+//         return false;
+//     }
+//     if (mail.value === ''){
+//         swal("Campo requerido!", "...debe ingresar su mail!");
+//         return false;
+//     }
+//     if (pass.value.length < 8){
+//         swal("Campo requerido!", "...la contraseña debe tener mas de 8 caracteres!");
+//         return false;
+//     }
+//     if (conPass.value !== pass.value){
+//         swal("Campo requerido!", "...las contraseñas no coinciden!");
+//         return false;
+//     }
 
-    return true;
+//     return true;
     
-}
+// }
