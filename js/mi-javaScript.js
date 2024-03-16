@@ -12,7 +12,6 @@ $(document).ready(function(){
        
         $("#f-signUp").hide(500);
         $("#f-login").show(500);
-        $("#titulo").text('Log In');   
     })
 
     $("#btn-crear").click(function(){
@@ -28,13 +27,38 @@ $(document).ready(function(){
         rules: {
             txtNombre: {
                 required: true,
-                minlenght: 3
+                minlength: 3
+            },
+            txtApellido:{
+                required: true,
+                minlength: 3 
+            },
+            txtmail:{
+                required: true,
+                email: true 
+            },
+            txtpas: {
+                required: true,
+                minlength: 6 
+            },
+            txtConfirmPass: {
+                required: true,
+                minlength: 6,
+                equalTo: "#txtpas" 
             }
         },
         messages: {
-            txtNombre: "Por favor, ingresa tu nombre."
-        }
+            txtNombre: "Por favor, ingresa tu nombre.",
+            txtApellido: "Por favor, ingresa tu apellido.",
+            txtmail: "Por favor, ingresa tu mail.",
+            txtpas: "La contraseña debe tener al menos 6 caracteres.", 
+            txtConfirmPass: "Las contraseñas no coinciden."
+        },
+        errorClass: "is-invalid",
+        validClass: "is-valid",
+        debug: true
     });
+    
 
 });
 
