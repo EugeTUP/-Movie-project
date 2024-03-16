@@ -126,12 +126,12 @@ span{
   margin-left: 7%;
 }
 
-label.error{
-  color:rgb(196, 63, 63);
+label.is-invalid{
+  color:rgb(237, 189, 189);
 }
-input.error{
-  border: 1px solid rgb(196, 63, 63) !important;
+input.is-invalid{
+  border: 1px solid rgb(237, 189, 189) !important;
 }
-input.valid{
-  border-color: 1pz solid rgb(124, 209, 124) !important;
+input.is-valid{
+  border : 1pz solid rgb(124, 209, 124) !important;
 }
