@@ -5,7 +5,7 @@
     font-size: 70px;
     color: #ffeba7;
     font-family: candara;
-    text-shadow: 15px 15px 8px rgba(10, 10, 10, 0.978) ;
+    text-shadow: 15px 15px 8px rgba(10, 10, 10, 0.978);
     top: 40%;
     transform: translateY(-50%);
 }
@@ -17,6 +17,7 @@
     height: 670px;
     display: flex;
 }
+
 .subtit {
     text-align: center;
     font-size: 60px;
@@ -104,6 +105,7 @@
 #fondo {
     height: 400px;
 }
+
 .iconos {
     display: inline-block;
     transition: transform 0.3s;
@@ -124,7 +126,7 @@
     color: #ffeba7;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 15px;
-    
+
 }
 
 #login {
@@ -149,6 +151,7 @@
     background: url(../image/fondo\ cine.jpg) center no-repeat;
     background-size: cover;
 }
+
 .borroso {
     position: absolute;
     top: 0;
@@ -156,42 +159,66 @@
     width: 100%;
     height: 100%;
     backdrop-filter: blur(5px);
-  }
+}
 
 .white {
     color: #ffeba7;
 }
 
-#btn-ingresar, #btn-crear{
+#btn-ingresar,
+#btn-crear {
     border-radius: 20px;
     width: 150px;
 
 }
 
-.mi-nav{
+.mi-nav {
     background-color: rgba(0, 0, 0, 0.374);
     height: 65px;
     width: 100%;
     backdrop-filter: blur(5px);
 }
-span{
+
+span {
     color: #ffeba7;
     text-decoration: none;
     font-size: 20px;
 }
-#linea-vertical
-{
+
+#linea-vertical {
     height: 250px;
-    width:0.5px;
+    width: 0.5px;
     color: #ffeba7;
 }
 
-#ig:hover
-{
+#ig:hover {
     content: url(../image/ig-con-color.png);
 }
-#wh:hover
-{
-    content:url('../image/wh-con-color.png')
+
+#wh:hover {
+    content: url('../image/wh-con-color.png')
 }
 
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.show {
+    view-timeline-name: --pelis;
+    view-timeline-axis: block;
+
+    animation-timeline: --pelis;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+
+}
