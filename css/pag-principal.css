@@ -222,3 +222,20 @@ span {
     animation-fill-mode: both;
 
 }
+
+.disabled {
+    display: none;
+}
+
+#Funciones{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 50px;
+    height: 400px;
+    background-color: rgba(50, 49, 49, 0.83);
+}
+#tit-fun{
+    color: #ffeba7;
+    font-size: 40px;
+    text-align: center;
+}

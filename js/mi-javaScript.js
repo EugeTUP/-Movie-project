@@ -71,6 +71,9 @@ $(document).ready(function(){
         $("#busqueda").show(300);
     })
 
+    $("#btn-funciones").click(function(){
+        $("#Funciones").show(200);
+    })
     
 
 });
