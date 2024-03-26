@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+    $('#buscar').hide();
+
    
     $("#btn-regis").click(function(){
         
@@ -57,7 +59,18 @@ $(document).ready(function(){
         errorClass: "is-invalid",
         validClass: "is-valid",
         debug: true
-    });
+    })
+
+
+    $("#busqueda").click(function(){
+        $("#buscar").show(300).focus();
+        $("#busqueda").hide(300);
+    })
+    $("#buscar").blur(function(){
+        $("#buscar").show(300).hide();
+        $("#busqueda").show(300);
+    })
+
     
 
 });

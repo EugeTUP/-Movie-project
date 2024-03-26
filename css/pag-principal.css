@@ -222,3 +222,6 @@ span {
     animation-fill-mode: both;
 
 }
+.disabled{
+    display: none;
+  }
