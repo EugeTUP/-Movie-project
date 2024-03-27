@@ -2,6 +2,8 @@
 $(document).ready(function(){
     $('#buscar').hide();
 
+
+//-----------------------/ Log-in /-------------------------------------------------------------------------------
    
     $("#btn-regis").click(function(){
         
@@ -62,6 +64,9 @@ $(document).ready(function(){
     })
 
 
+//-----------------------/ principal html /-------------------------------------------------------------------------------
+
+
     $("#busqueda").click(function(){
         $("#buscar").show(300).focus();
         $("#busqueda").hide(300);
@@ -71,10 +76,18 @@ $(document).ready(function(){
         $("#busqueda").show(300);
     })
 
-    $("#btn-funciones").click(function(){
+    $(".btn-funciones").click(function(){
         $("#Funciones").show(200);
+        var img = $(this).closest('.card').find('.spiderman').attr("src");
+
+        $("#selected-image").attr("src",img)
     })
-    
+
+
+    $("#cerrar").click(function(){
+        $("#Funciones").hide(200);
+    })
+
 
 });
 
