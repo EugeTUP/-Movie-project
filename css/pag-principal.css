@@ -242,8 +242,28 @@ span {
 }
 #selected-image{
     display: absolute;
-    margin-left: 45%;
-    margin-top:15px;
-    height:350px;
+    height:320px;
+    align-items: center;
 
+}
+#you-tube{
+    display: absolute;
+    width:65px;
+    height: 60px;
+    margin-top:50%;
+    z-index: 1;
+    cursor: pointer;
+    align-self: center;
+
+}
+#carta-funciones{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 50%;
+    border:none;
+}
+#trailer{
+    font-size: 25px;
+    cursor: pointer;
+    align-self: center;
 }

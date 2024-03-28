@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
     $('#buscar').hide();
+    $("#you-tube").hide();
+    $("#trailer-video").hide();
 
 
 //-----------------------/ Log-in /-------------------------------------------------------------------------------
@@ -77,16 +79,28 @@ $(document).ready(function(){
     })
 
     $(".btn-funciones").click(function(){
-        $("#Funciones").show(200);
+        $("#Funciones").show(400);
         var img = $(this).closest('.card').find('.spiderman').attr("src");
-
-        $("#selected-image").attr("src",img)
+        var trailer = $(this).closest(".card").find(".videos").attr("src");
+        
+        $("#selected-image").attr("src",img);
+        $("#trailer-video").attr("src",trailer);
     })
 
 
     $("#cerrar").click(function(){
-        $("#Funciones").hide(200);
+        $("#Funciones").hide(400);
     })
+
+    $("#selected-image").hover(function(){
+        $("#you-tube").show();
+    })
+
+    $("#you-tube").click(function(){
+        $("#trailer-video").toggle();
+        $("#trailer").toggle();
+    })
+    
 
 
 });
