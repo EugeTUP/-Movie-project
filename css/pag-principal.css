@@ -267,3 +267,9 @@ span {
     cursor: pointer;
     align-self: center;
 }
+#descripcion{
+    color: #ffeba7;
+    display: absolute;
+    font-size: 20px;
+
+}

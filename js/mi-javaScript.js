@@ -81,7 +81,7 @@ $(document).ready(function(){
     $(".btn-funciones").click(function(){
         $("#Funciones").show(400);
         var img = $(this).closest('.card').find('.spiderman').attr("src");
-        var trailer = $(this).closest(".card").find(".videos").attr("src");
+        var trailer = $(this).closest(".card").find(".video").attr("src");
         
         $("#selected-image").attr("src",img);
         $("#trailer-video").attr("src",trailer);
@@ -101,6 +101,7 @@ $(document).ready(function(){
         $("#trailer").toggle();
     })
     
+
 
 
 });
