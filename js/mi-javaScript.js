@@ -99,6 +99,7 @@ $(document).ready(function(){
     $("#you-tube").click(function(){
         $("#trailer-video").toggle();
         $("#trailer").toggle();
+    
     })
     
 

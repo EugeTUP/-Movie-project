@@ -55,6 +55,7 @@
 }
 
 .center {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,11 +187,11 @@ span {
 }
 
 #ig:hover {
-    content: url(../image/ig-con-color.png);
+    content: url(../image/iconos/ig-con-color.png);
 }
 
 #wh:hover {
-    content: url('../image/wh-con-color.png')
+    content: url('../image/iconos/wh-con-color.png')
 }
 
 @keyframes show {
@@ -259,7 +260,6 @@ span {
 #carta-funciones{
     position: absolute;
     margin-top: 20px;
-    margin-left: 50%;
     border:none;
 }
 #trailer{
@@ -269,7 +269,17 @@ span {
 }
 #descripcion{
     color: #ffeba7;
-    display: absolute;
+    position: absolute;
     font-size: 20px;
-
+    width:150px;
+    margin-top: 20px;
 }
+#trailer-video{
+    position: absolute;
+    align-self: center;
+    z-index: 9999999;
+    width:60%;
+    height: 65%;
+}
+
+
