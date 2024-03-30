@@ -2,7 +2,7 @@
 $(document).ready(function(){
     $('#buscar').hide();
     $("#you-tube").hide();
-    $("#trailer-video").hide();
+    $("#contenedor-trailer").hide();
 
 
 //-----------------------/ Log-in /-------------------------------------------------------------------------------
@@ -84,12 +84,17 @@ $(document).ready(function(){
         var trailer = $(this).closest(".card").find(".video").attr("src");
         
         $("#selected-image").attr("src",img);
-        $("#trailer-video").attr("src",trailer);
+        $("#almacen").attr("src",trailer);
     })
 
 
     $("#cerrar").click(function(){
         $("#Funciones").hide(400);
+    })
+    $("#cerrar-video").click(function(){
+        $("#contenedor-trailer").hide();
+         var stop = "";
+        $("#trailer-video").attr("src",stop);
     })
 
     $("#selected-image").hover(function(){
@@ -97,12 +102,13 @@ $(document).ready(function(){
     })
 
     $("#you-tube").click(function(){
-        $("#trailer-video").toggle();
-        $("#trailer").toggle();
-    
-    })
-    
+        $("#contenedor-trailer").show();
+        var trailer = $(this).closest(".card").find("#almacen").attr("src");
 
+        $("#trailer-video").attr("src",trailer);
+
+
+    })
 
 
 });
