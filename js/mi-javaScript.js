@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('#buscar').hide();
     $("#you-tube").hide();
     $("#contenedor-trailer").hide();
-
+    $("#btn-carga").hide();
 
 //-----------------------/ Log-in /-------------------------------------------------------------------------------
    
@@ -85,11 +85,23 @@ $(document).ready(function(){
         
         $("#selected-image").attr("src",img);
         $("#almacen").attr("src",trailer);
+        $(".sr-dias").removeClass("activo");
+        $(".sr-horario").removeClass("activo");
+        $(".sr-horario").addClass("disabled");
+        $("#btn-siguiente").addClass("disabled");
+
+
     })
 
 
     $("#cerrar").click(function(){
         $("#Funciones").hide(400);
+        $(".sr-dias").removeClass("activo");
+        $(".sr-horario").removeClass("activo");
+        $(".sr-horario").addClass("disabled");
+        $("#btn-siguiente").addClass("disabled");
+
+
     })
     $("#cerrar-video").click(function(){
         $("#contenedor-trailer").hide();
@@ -106,9 +118,27 @@ $(document).ready(function(){
         var trailer = $(this).closest(".card").find("#almacen").attr("src");
 
         $("#trailer-video").attr("src",trailer);
-
-
     })
+
+    $(".sr-dias").click(function(){
+        $(".sr-dias").removeClass("activo");
+        $(".sr-horario").removeClass("disabled");
+
+        $("#test-horarios").fadeIn();
+        $(this).addClass("activo");
+    })
+    $(".sr-horario").click(function(){
+        $(".sr-horario").removeClass("activo");
+        $(this).addClass("activo");
+        $("#btn-siguiente").removeClass("disabled");
+    })
+    $("#btn-siguiente").click(function(){
+        $("#btn-carga").fadeIn();
+        $("#btn-carga").addClass("load");
+    });
+
+
+
 
 
 });

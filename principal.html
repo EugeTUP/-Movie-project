@@ -68,14 +68,59 @@
     </div>
   </section>
 
-  <section class="disabled" id="Funciones">
+  <section id="Funciones" class="escondido overflow-hidden">
     <div class="row">
-      <div class="col col-lg-6">
-
+      <div class="col  col-lg-6 col-md-6 ">
+        <div class="test" id="test-dias">
+          <h2 class="my-4 selector">Seleccione el dia:</h2>
+          <input type="radio" name="radioDias" id="radio-hoy">
+          <label for="radio-hoy">
+            <span class="sr-dias btn btn-secondary">
+              Hoy
+            </span>
+          </label>
+          <input type="radio" name="radioDias" id="radio-mañana">
+          <label for="radio-mañana">
+            <span class="sr-dias btn btn-secondary">
+              Mañana
+            </span>
+          </label>
+          <input type="radio" name="radioDias" id="radio-pasado">
+          <label for="radio-pasado">
+            <span class="sr-dias btn btn-secondary">
+              Pasado
+            </span>
+          </label>
+          <input type="radio" name="radioDias" id="radio-trasPasado">
+          <label for="radio-trasPasado">
+            <span class="sr-dias  btn btn-secondary">
+              trasPasado
+            </span>
+          </label>
+        </div>
+        <div id="test-horarios" class="test">
+          <h2 class="mt-5 selector">Seleccione el horario:</h2>
+          <input type="radio" name="radioHorario" id="radio-1">
+          <label for="radio-1">
+            <span class="sr-horario btn btn-secondary disabled">
+              10:00 a.m
+            </span>
+          </label>
+          <input type="radio" name="radioHorario" id="radio-2">
+          <label for="radio-2">
+            <span class=" sr-horario btn btn-secondary disabled">
+              12:00 a.m
+            </span>
+          </label>
+        </div>
+        <div class="position-relative">
+          <a class="btn disabled" id="btn-siguiente" href="compra.html" >Siguiente</a>
+          <button class="btn" id="btn-carga" type="button"></button>
+        </div>
       </div>
-      <div class="col col-lg-3">
+      <div class="col col-lg-3 col-md-3">
         <div>
-          <div id="carta-funciones" class="card text-bg-dark" style="width: 14rem;">
+          <div id="carta-funciones" class="card" style="width: 14rem;">
             <img id="selected-image" src="" alt="" class="spiderman">
             <div id="almacen" src=""></div>
             <div class="card-body oculto" id="body-function">
@@ -84,10 +129,9 @@
               <p id="trailer">ver trailer</p>
             </div>
           </div>
-
         </div>
       </div>
-      <div class="col col-lg-3">
+      <div class="col col-lg-3 col-md-3">
         <div>
           <p id="descripcion">Descripción:</p>
         </div>
@@ -101,11 +145,11 @@
     </div>
   </section>
 
-  <div id="contenedor-trailer" class="container center">
+  <div id="contenedor-trailer" class="container-fluid center">
     <img src="image/iconos/cerrar.png" alt="cerrar" id="cerrar-video">
     <iframe id="trailer-video" width="560" height="315" src="">
     </iframe>
-     
+
   </div>
 
   <section id="taquilla" class="center">
