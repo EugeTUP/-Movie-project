@@ -371,12 +371,12 @@ span {
     height: 38px;
     background-color: rgb(65, 83, 77);
     position: absolute;
-}
-.load{
-    animation:load 1.0s;
+    color: #c8cacb
 }
 
-@keyframes load{
-    from{width:0;}
-    to{width:250px;}
+
+.nombre-jodita{
+    margin-top: 10%;
+    margin-left: 25%;
+    width:50%;
 }

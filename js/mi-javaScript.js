@@ -4,6 +4,7 @@ $(document).ready(function(){
     $("#you-tube").hide();
     $("#contenedor-trailer").hide();
     $("#btn-carga").hide();
+    $("#hello-w").hide();
 
 //-----------------------/ Log-in /-------------------------------------------------------------------------------
    
@@ -132,11 +133,26 @@ $(document).ready(function(){
         $(this).addClass("activo");
         $("#btn-siguiente").removeClass("disabled");
     })
-    $("#btn-siguiente").click(function(){
-        $("#btn-carga").fadeIn();
-        $("#btn-carga").addClass("load");
+    $("#btn-siguiente").click(function(event){
+        event.preventDefault();
+
+        $("#btn-carga").fadeIn(30);
+        $("#btn-carga").animate({width: '250px'}, 550);
+
+
+        setTimeout(function() {
+            window.location.href = $("#btn-siguiente").attr('href');
+        }, 1000);
     });
 
+    $("#btn-jodita").click(function(){
+        $("#hello-w").show();
+    });
+   
+    var inputs = $(".jodita").value();
+    if(inputs > 1){
+        $("#btn-jodita").removeClass("disabled");
+    }
 
 
 
